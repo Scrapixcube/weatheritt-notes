@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>W Notes Physics</title>
+<link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
+<link rel="manifest" href="images/icon/site.webmanifest">
+
+<link rel="stylesheet" href="styles.css">
+
+<script>
+function sortTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("symbol");
+  switching = true;
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[0];
+      y = rows[i + 1].getElementsByTagName("TD")[0];
+      //check if the two rows should switch place:
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        //if so, mark as a switch and break the loop:
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>
+
+</head>
+
+<body onload="sortTable()">
+
+<div id="back">
+
+<div id="title">
+
+<a href="index.html" target="_self" class="button">
+	<p>Homepage</p>
+</a>
+
+<div id="titlewords">
+
+<h1>Physics Notes</h1>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Formulas:</h2>
+
+<dl>
+	<dt>Nat5 Formulas:</dt>
+	<dd>d = vt</dd>
+	<dd>d = v̄t</dd>
+	<dd>s = vt</dd>
+	<dd>s = v̄t</dd>
+	<dd>a = <sup>v-u</sup>&frasl;<sub>t</sub></dd>
+	<dd>F = ma</dd>
+	<dd>W = ma</dd>
+	<dd>E<sub>w</sub> = Fd</dd>
+	<dd>E<sub>p</sub> = mgh</dd>
+	<dd>E<sub>k</sub> = <sup>1</sup>&frasl;<sub>2</sub>mv<sup>2</sup></dd>
+	<dd>Q = It</dd>
+	<dd>V = IR</dd>
+	<dd>V<sub>2</sub> = <sup>V<sub>s</sub>R<sub>2</sub></sup>&frasl;<sub>R<sub>1</sub>+ R<sub>2</sub></sub></dd>
+</dl>
+
+<dl>
+	<dt>Nat5 Formulas:</dt>
+	<dd><sup>V<sub>1</sub></sup>&frasl;<sub>V<sub>2</sub></sub> = <sup>R<sub>1</sub></sup>&frasl;<sub>R<sub>2</sub></sub></dd>
+	<dd>R<sub>T</sub> = R<sub>1</sub>+ R<sub>2</sub>+ ...</dd>
+	<dd><sup>1</sup>&frasl;<sub>R<sub>T</sub></sub> = <sup>1</sup>&frasl;<sub>R<sub>1</sub></sub>+<sup>1</sup>&frasl;<sub>R<sub>T</sub></sub>+ ...</dd>
+	<dd>P = <sup>E</sup>&frasl;<sub>t</sub></dd>
+	<dd>P = IV</dd>
+	<dd>P = I<sup>2</sup></dd>
+	<dd>P = <sup>V<sup>2</sup></sup>&frasl;<sub>R</sub></dd>
+	<dd>E<sub>h</sub> = cm△T</dd>
+	<dd>E<sub>h</sub> = ml</dd>
+	<dd>p = <sup>F</sup>&frasl;<sub>A</sub></dd>
+	<dd>p<sub>1</sub>V<sub>1</sub> = p<sub>2</sub>V<sub>2</sub></dd>
+</dl>
+
+<dl>
+	<dt>Nat5 Formulas:</dt>
+	<dd><sup>p<sub>1</sub></sup>&frasl;<sub>p<sub>1</sub></sub> = <sup>V<sub>2</sub></sup>&frasl;<sub>T<sub>2</sub></sub></dd>
+	<dd><sup>V<sub>1</sub></sup>&frasl;<sub>T<sub>1</sub></sub> = <sup>V<sub>2</sub></sup>&frasl;<sub>T<sub>2</sub></sub></dd>
+	<dd><sup>pV</sup>&frasl;<sub>T</sub> = constant</dd>
+	<dd>f = <sup>N</sup>&frasl;<sub>t</sub></dd>
+	<dd>v = fλ</dd>
+	<dd>T = <sup>1</sup>&frasl;<sub>f</sub></dd>
+	<dd>A = <sup>N</sup>&frasl;<sub>t</sub></dd>
+	<dd>D = <sup>E</sup>&frasl;<sub>m</sub></dd>
+	<dd>H = Dw<sub>r</sub></dd>
+	<dd>Ḣ = <sup>H</sup>&frasl;<sub>t</sub></dd>
+</dl>
+
+<dl>
+	<dt>Extra Formulas:</dt>
+	<dd>half life = <sup>t</sup>&frasl;<sub>log<sub>2</sub>(<sup>A<sub>1</sub></sup>&frasl;<sub>A<sub>2</sub></sub>)</sub></dd>
+	<dd>A<sub>2</sub> = <sup>A<sub>1</sub></sup>&frasl;<sub>2<sup>t half life<sup>-1</sup></sup></sub></dd>
+</dl>
+
+</div>
+
+<div class="section">
+
+<h2>Symbols:</h2>
+
+<table id="symbol">
+	
+	<tr>
+		<th>Symbol</th>
+		<th>Quantity</th>
+		<th>Units</th>
+		<th>Units (Letters)</th>
+	</tr>
+	<tr>
+		<td>E<sub>p</sub></td>
+		<td>gravitational potential energy</td>
+		<td>joule</td>
+		<td>J</td>
+	</tr>
+	<tr>
+		<td>m</td>
+		<td>mass</td>
+		<td>kilogram</td>
+		<td>kg</td>
+	</tr>
+	<tr>
+		<td>g</td>
+		<td>gravitational field strength</td>
+		<td>newton per kilogram</td>
+		<td>N kg<sup>-1</sup></td>
+	</tr>
+	<tr>
+		<td>h</td>
+		<td>height</td>
+		<td>meter</td>
+		<td>m</td>
+	</tr>
+	<tr>
+		<td>E<sub>k</sub></td>
+		<td>kinetic energy</td>
+		<td>joule</td>
+		<td>J</td>
+	</tr>
+	<tr>
+		<td>v</td>
+		<td>velocity</td>
+		<td>metre per second</td>
+		<td>m s<sup>-1</sup></td>
+	</tr>
+	<tr>
+		<td>Q</td>
+		<td>electric charge</td>
+		<td>coulomb</td>
+		<td>C</td>
+	</tr>
+	<tr>
+		<td>I</td>
+		<td>electric current</td>
+		<td>ampere</td>
+		<td>A</td>
+	</tr>
+	<tr>
+		<td>t</td>
+		<td>time</td>
+		<td>second</td>
+		<td>s</td>
+	</tr>
+	<tr>
+		<td>V</td>
+		<td>voltage potential difference</td>
+		<td>volt</td>
+		<td>V</td>
+	</tr>
+	<tr>
+		<td>R</td>
+		<td>resistance</td>
+		<td>ohm</td>
+		<td>Ω</td>
+	</tr>
+	<tr>
+		<td>R<sub>T</sub></td>
+		<td>total resistance</td>
+		<td>ohm</td>
+		<td>Ω</td>
+	</tr>
+	<tr>
+		<td>V<sub>S</sub></td>
+		<td>supply voltage</td>
+		<td>volts</td>
+		<td>V</td>
+	</tr>
+	<tr>
+		<td>P</td>
+		<td>power</td>
+		<td>watt</td>
+		<td>W</td>
+	</tr>
+	<tr>
+		<td>E</td>
+		<td>energy</td>
+		<td>joule</td>
+		<td>J</td>
+	</tr>
+	<tr>
+		<td>E<sub>h</sub></td>
+		<td>heat energy</td>
+		<td>joule</td>
+		<td>J</td>
+	</tr>
+	<tr>
+		<td>c</td>
+		<td>specific heat capacity</td>
+		<td>joule per kilogram per degree Celsius</td>
+		<td>J kg<sup>-1 0</sup>C<sup>-1</sup></td>
+	</tr>
+	<tr>
+		<td>T</td>
+		<td>temperature</td>
+		<td>kelvin or degree Celsius</td>
+		<td>K or <sup>0</sup>C</td>
+	</tr>
+	<tr>
+		<td>p</td>
+		<td>pressure</td>
+		<td>pascal</td>
+		<td>Pa</td>
+	</tr>
+	<tr>
+		<td>F</td>
+		<td>force</td>
+		<td>newton</td>
+		<td>N</td>
+	</tr>
+	<tr>
+		<td>A</td>
+		<td>area</td>
+		<td>square metre</td>
+		<td>m<sup>2</sup></td>
+	</tr>
+	<tr>
+		<td>V</td>
+		<td>volume</td>
+		<td>cubic metre</td>
+		<td>m<sup>3</sup></td>
+	</tr>
+	<tr>
+		<td>d</td>
+		<td>distance</td>
+		<td>metre</td>
+		<td>m</td>
+	</tr>
+	<tr>
+		<td>v</td>
+		<td>speed</td>
+		<td>metre per second</td>
+		<td>m s<sup>-1</sup></td>
+	</tr>
+	<tr>
+		<td>f</td>
+		<td>frequency</td>
+		<td>hertz</td>
+		<td>Hz</td>
+	</tr>
+	<tr>
+		<td>λ</td>
+		<td>wavelength</td>
+		<td>metre</td>
+		<td>m</td>
+	</tr>
+	<tr>
+		<td>A</td>
+		<td>amplitude</td>
+		<td>metre</td>
+		<td>m</td>
+	</tr>
+	<tr>
+		<td>T</td>
+		<td>period</td>
+		<td>second</td>
+		<td>s</td>
+	</tr>
+	<tr>
+		<td>A</td>
+		<td>activity</td>
+		<td>becquerel</td>
+		<td>Bq</td>
+	</tr>
+	<tr>
+		<td>N</td>
+		<td>number of counts, decays</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>D</td>
+		<td>absorbed dose</td>
+		<td>gray</td>
+		<td>Gy</td>
+	</tr>
+	<tr>
+		<td>H</td>
+		<td>equivalent dose</td>
+		<td>sievert</td>
+		<td>Sv</td>
+	</tr>
+	<tr>
+		<td>w<sub>R</sub></td>
+		<td>radiation weighting factor</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Ḣ</td>
+		<td>equivalent dose rate</td>
+		<td>sievert per second</td>
+		<td>Sv s-1</td>
+	</tr>
+	<tr>
+		<td>s</td>
+		<td>displacement</td>
+		<td>metre</td>
+		<td>m</td>
+	</tr>
+	<tr>
+		<td>v̄</td>
+		<td>average velocity</td>
+		<td>metre per second</td>
+		<td>m s<sup>-1</sup></td>
+	</tr>
+	<tr>
+		<td>a</td>
+		<td>acceleration</td>
+		<td>metre per second per second</td>
+		<td>m/s<sup>2</sup></td>
+	</tr>
+	<tr>
+		<td>v</td>
+		<td>final velocity</td>
+		<td>metre per second</td>
+		<td>m s<sup>-1</sup></td>
+	</tr>
+	<tr>
+		<td>u</td>
+		<td>initial velocity</td>
+		<td>metre per second</td>
+		<td>m s<sup>-1</sup></td>
+	</tr>
+	<tr>
+		<td>W</td>
+		<td>weight</td>
+		<td>newton</td>
+		<td>N</td>
+	</tr>
+	<tr>
+		<td>E<sub>w</sub></td>
+		<td>work done</td>
+		<td>joule</td>
+		<td>J</td>
+	</tr>
+	<tr>
+		<td>l</td>
+		<td>specific latent heat</td>
+		<td>joule per kilogram</td>
+		<td>J kg<sub>-1</sup></td>
+	</tr>
+	
+</table>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
