@@ -9,7 +9,7 @@ h1{
 	font-family: Garamond;
 	font-size: 55pt;
 	text-align: center;
-	color: white;
+	color: #e6e6e6;
 	margin: auto;
 }
 
@@ -17,17 +17,21 @@ h2 {
 	font-family: Comic Sans MS;
 	font-size: 25pt;
 	text-align: left;
-	color: white;
-	margin: 0;
+	color: #545454;
+	margin: 2pt 0 5pt 0;
+	padding: 2pt 10pt;
 	
 	display: block;
-	width: 100%
+	width: 100%;
+	border-radius: 10pt;
+	background-color: #f5ce93;
 }
 
 h3 {
 	font-family: Helvetica;
 	font-size: 20pt;
 	text-align: left;
+	color: white;
 	margin: 0;
 }
 
@@ -36,23 +40,6 @@ p {
 	font-size: 15pt;
 	text-align: left;
 	margin: 0;
-}
-
-dl {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	
-	width: 200pt;
-	min-height: 370pt;
-	margin: 2pt 5pt;
-	background-image: linear-gradient(0deg, #a8edf7, #dfe1f7);
-	border-radius: 10pt;
-}
-
-dl:hover {
-	background-image: linear-gradient(0deg, #234a2e, #2e6341);
-	color: white;
 }
 
 dt {
@@ -98,6 +85,60 @@ th {
 	line-height: 30pt;
 }
 
+hr {
+	flex: 0 0 calc(100% - 50pt);
+	border: 5pt solid #545454;
+	border-radius: 5pt;
+}
+
+.formulae {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	
+	width: 200pt;
+	min-height: 370pt;
+	margin: 2pt 5pt;
+	
+	background-image: linear-gradient(0deg, #a8edf7, #dfe1f7);
+	border-radius: 10pt;
+}
+
+.formulae:hover {
+	background-image: linear-gradient(0deg, #234a2e, #2e6341);
+	color: white;
+}
+
+.definitions {
+	display: block;
+	
+	border-radius: 10pt;
+	width: 300pt;
+	float: left;
+	margin: 2pt 5pt;
+	background-image: linear-gradient(0deg, #a8edf7, #dfe1f7);
+	padding: 10pt;
+}
+
+.definitions dd {
+	font-size: 15pt;
+	text-align: justify;
+	padding: 5pt 0;
+	border-top: 2pt solid black;
+}
+.definitions dt {
+	font-weight: bold;
+}
+
+.definitions:hover {
+	background-image: linear-gradient(0deg, #234a2e, #2e6341);
+	color: white;
+}
+
+.definitions:hover dd {
+	border-color: white;
+}
+
 .button {
 	background-color: #b9bac4;
 	color: white;
@@ -115,7 +156,7 @@ th {
 	background-color: #77798f;
 }
 
-.section {
+#content {
 	display: flex;
 	flex-wrap: wrap;
 	align-content: stretch;
@@ -152,7 +193,7 @@ th {
 	margin: auto;
 	margin-bottom: 20pt;
 	margin-top: 20pt;
-	background-color: #9e94eb;
+	background-image: linear-gradient(-90deg, #9e94eb, #96a1e0);
 	max-width: 1210pt;
 	border-radius: 10pt;
 	min-height: 100pt;
