@@ -1,5 +1,5 @@
 body {
-	background-image: linear-gradient(45deg, #90f5da, #f2da6f);
+	background-color: #f5d0a4;
 	height: 100vh;
 	background-attachment: fixed;
 	margin: 0;
@@ -9,22 +9,23 @@ h1{
 	font-family: Garamond;
 	font-size: 55pt;
 	text-align: center;
-	color: #e6e6e6;
 	margin: auto;
 }
 
 h2 {
+	display: block;
+	
 	font-family: Comic Sans MS;
 	font-size: 25pt;
 	text-align: left;
 	color: #545454;
-	margin: 2pt 0 5pt 0;
-	padding: 2pt 10pt;
 	
-	display: block;
+	background-color: #f5ce93;
+	
+	margin: 5pt 5pt;
+	padding: 2pt 10pt;
 	width: 100%;
 	border-radius: 10pt;
-	background-color: #f5ce93;
 }
 
 h3 {
@@ -111,13 +112,14 @@ hr {
 
 .definitions {
 	display: block;
-	
-	border-radius: 10pt;
-	width: 300pt;
 	float: left;
+	
+	width: 300pt;
 	margin: 2pt 5pt;
-	background-image: linear-gradient(0deg, #a8edf7, #dfe1f7);
 	padding: 10pt;
+
+	border-radius: 10pt;
+	background-image: linear-gradient(0deg, #a8edf7, #dfe1f7);
 }
 
 .definitions dd {
@@ -140,16 +142,19 @@ hr {
 }
 
 .button {
-	background-color: #b9bac4;
-	color: white;
-	width: 140pt;
-	cursor: pointer;
 	display: flex;
-	text-decoration: none;
 	float: left;
-	border-radius: 10pt;
 	align-items: center;
 	justify-content: center;
+	
+	width: 140pt;
+	
+	background-color: #b9bac4;
+	border-radius: 10pt;
+	cursor: pointer;
+	
+	color: white;
+	text-decoration: none;
 }
 
 .button:hover {
@@ -161,13 +166,13 @@ hr {
 	flex-wrap: wrap;
 	align-content: stretch;
 	
-	border-radius: 10pt;
 	margin: auto;
 	margin-bottom: 20pt;
-	padding: 5pt;
-	max-width: 1200pt;
+	padding: 0;
+	max-width: 100%;
+	
+	border-radius: 10pt;
 	background-color: #f58867;
-	overflow: auto;
 }
 
 #buttons {
@@ -178,7 +183,7 @@ hr {
 	background-color: #b9bac4;
 	border-radius: 35pt;
 	
-	max-width: 1210pt;
+	max-width: 100%;
 	margin: auto;
 	height: 70pt;
 }
@@ -190,13 +195,12 @@ hr {
 
 	z-index: 1;
 
-	margin: auto;
-	margin-bottom: 20pt;
-	margin-top: 20pt;
-	background-image: linear-gradient(-90deg, #9e94eb, #96a1e0);
-	max-width: 1210pt;
+	background-image: linear-gradient(-90deg, #a8edf7, #dfe1f7);
 	border-radius: 10pt;
+	
+	max-width: 100%;
 	min-height: 100pt;
+	margin: 20pt auto;
 	
 	display: flex;
 	align-content: stretch;
@@ -208,6 +212,7 @@ hr {
 }
 
 #back {
-	width: 100%;
+	max-width: 1200pt;
+	margin: 0 auto;
 	height: auto;
 }
